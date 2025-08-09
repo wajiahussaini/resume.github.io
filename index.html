@@ -10,11 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ==========================
-       THEME VARIABLES
-       ========================== */
     :root{
-      /* Warm & Trusting */
       --color-primary: #2B6CB0;
       --color-accent:  #F6AD55;
       --bg:            #F7FAFC;
@@ -37,7 +33,6 @@
       justify-content:center;
       padding: var(--spacing);
     }
-
     img{ max-width:100%; display:block; }
 
     .container{
@@ -52,7 +47,6 @@
       gap: var(--spacing);
     }
 
-    /* HEADER */
     header{
       display:flex;
       flex-wrap:wrap;
@@ -73,27 +67,10 @@
       color:white;
       flex-shrink:0;
     }
-    .headline{
-      flex:1;
-      min-width:260px;
-    }
-    .name{
-      margin:0;
-      font-family:"Inter", sans-serif;
-      font-size:26px;
-      font-weight:700;
-    }
-    .tag{
-      margin:6px 0 0;
-      color:var(--muted);
-      font-size:15px;
-    }
-    .cta{
-      margin-top:10px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+    .headline{ flex:1; min-width:260px; }
+    .name{ margin:0; font-family:"Inter", sans-serif; font-size:26px; font-weight:700; }
+    .tag{ margin:6px 0 0; color:var(--muted); font-size:15px; }
+    .cta{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
     .btn{
       background:var(--color-primary);
       color:white;
@@ -117,7 +94,6 @@
     }
     .btn-ghost:hover{ background:rgba(0,0,0,0.03); }
 
-    /* LAYOUT */
     main{
       display:grid;
       grid-template-columns: 2fr 1fr;
@@ -127,7 +103,6 @@
       main{ grid-template-columns: 1fr; }
     }
 
-    /* CARDS */
     .card{
       background:var(--surface);
       padding:18px;
@@ -137,22 +112,10 @@
       flex-direction:column;
       gap:12px;
     }
-    h2{
-      margin:0;
-      font-family:"Inter", sans-serif;
-      font-size:18px;
-      color:var(--text);
-    }
-
-    /* ABOUT */
+    h2{ margin:0; font-family:"Inter", sans-serif; font-size:18px; color:var(--text); }
     .about { font-size:15px; }
 
-    /* SKILLS */
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
+    .skills{ display:flex; flex-wrap:wrap; gap:8px; }
     .skill{
       background: rgba(0,0,0,0.03);
       border-radius:6px;
@@ -160,27 +123,12 @@
       font-size:13px;
       transition: background 0.2s ease;
     }
-    .skill:hover{
-      background: var(--color-accent);
-      color: var(--text);
-    }
+    .skill:hover{ background: var(--color-accent); color: var(--text); }
 
-    /* EXPERIENCE */
-    .job{
-      border-left:3px solid rgba(0,0,0,0.08);
-      padding-left:10px;
-    }
-    .job h3{
-      margin:0;
-      font-family:"Inter", sans-serif;
-      font-size:15px;
-    }
-    .meta{
-      font-size:13px;
-      color:var(--muted);
-    }
+    .job{ border-left:3px solid rgba(0,0,0,0.08); padding-left:10px; }
+    .job h3{ margin:0; font-family:"Inter", sans-serif; font-size:15px; }
+    .meta{ font-size:13px; color:var(--muted); }
 
-    /* CONTACT */
     .contact-list{
       list-style:none;
       padding:0;
@@ -200,7 +148,6 @@
       text-align:center;
     }
 
-    /* BLOCKQUOTE */
     blockquote{
       margin:0;
       padding:10px;
@@ -210,7 +157,41 @@
       color:var(--muted);
     }
 
-    /* FOOTER */
+    /* Form Styles */
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    input, textarea{
+      font-family:inherit;
+      font-size:14px;
+      padding:8px 10px;
+      border:1px solid rgba(0,0,0,0.15);
+      border-radius:6px;
+      background:white;
+      resize:none;
+    }
+    textarea{ min-height:100px; }
+    input:focus, textarea:focus{
+      outline:none;
+      border-color: var(--color-primary);
+      box-shadow:0 0 0 2px rgba(43,108,176,0.15);
+    }
+    button{
+      background:var(--color-primary);
+      color:white;
+      border:none;
+      padding:8px 12px;
+      border-radius:6px;
+      font-size:14px;
+      font-family:"Inter", sans-serif;
+      font-weight:600;
+      cursor:pointer;
+      transition:background 0.2s ease;
+    }
+    button:hover{ background:#1A4C80; }
+
     footer{
       text-align:center;
       font-size:13px;
@@ -303,6 +284,16 @@
         </section>
 
         <section class="card">
+          <h2>Message Me</h2>
+          <form action="https://formspree.io/f/xeozvqyb" method="POST">
+            <input type="text" name="name" placeholder="Your name" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+          <small style="color:var(--muted);font-size:12px;">Powered by Formspree</small>
+        </section>
+
+        <section class="card">
           <h2>Education & Certs</h2>
           <p><strong>BA:</strong> English Language & Literature — Kunduz University</p>
           <p><strong>Midwifery Program:</strong> Ahmad Shah Baba Institute of Health Sciences</p>
@@ -311,24 +302,4 @@
 
         <section class="card">
           <h2>References</h2>
-          <p><strong>Jawed Dawlatpoor</strong><br/>Education Technical Advisor — contact available on request</p>
-        </section>
-      </aside>
-    </main>
-
-    <footer>
-      Available for collaboration on education, community protection, and data-driven humanitarian initiatives.
-    </footer>
-  </div>
-
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
-</body>
-</html>
+          <p><s
