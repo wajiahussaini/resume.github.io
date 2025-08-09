@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wajia Hussaini — Education & Community Engagement Specialist</title>
+  <meta name="description" content="Wajia Hussaini — Education & Community Engagement Specialist focused on community protection, MRE, and data-driven humanitarian programs in Afghanistan." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================
+       THEME VARIABLES
+       ========================== */
+    :root{
+      /* Warm & Trusting */
+      --color-primary: #2B6CB0;
+      --color-accent:  #F6AD55;
+      --bg:            #F7FAFC;
+      --surface:       #FFFFFF;
+      --text:          #1A202C;
+      --muted:         #4A5568;
+      --radius:        10px;
+      --max-width:     1100px;
+      --spacing:       24px;
+    }
+
+    * { box-sizing: border-box; }
+    html,body { margin:0; padding:0; }
+    body{
+      font-family: "Merriweather", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.5;
+      display:flex;
+      justify-content:center;
+      padding: var(--spacing);
+    }
+
+    img{ max-width:100%; display:block; }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      padding: var(--spacing);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing);
+    }
+
+    /* HEADER */
+    header{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap: var(--spacing);
+    }
+    .avatar{
+      width:100px;
+      height:100px;
+      border-radius: var(--radius);
+      background:linear-gradient(135deg,var(--color-primary), var(--color-accent));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:"Inter", sans-serif;
+      font-weight:700;
+      font-size:28px;
+      color:white;
+      flex-shrink:0;
+    }
+    .headline{
+      flex:1;
+      min-width:260px;
+    }
+    .name{
+      margin:0;
+      font-family:"Inter", sans-serif;
+      font-size:26px;
+      font-weight:700;
+    }
+    .tag{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .cta{
+      margin-top:10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      background:var(--color-primary);
+      color:white;
+      padding:8px 14px;
+      border-radius:6px;
+      text-decoration:none;
+      font-family:"Inter", sans-serif;
+      font-weight:600;
+      font-size:14px;
+      transition:background 0.2s ease;
+    }
+    .btn:hover{ background:#1A4C80; }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(26,32,44,0.15);
+      color:var(--text);
+      padding:8px 14px;
+      border-radius:6px;
+      font-size:14px;
+      transition:background 0.2s ease;
+    }
+    .btn-ghost:hover{ background:rgba(0,0,0,0.03); }
+
+    /* LAYOUT */
+    main{
+      display:grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--spacing);
+    }
+    @media (max-width:900px){
+      main{ grid-template-columns: 1fr; }
+    }
+
+    /* CARDS */
+    .card{
+      background:var(--surface);
+      padding:18px;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    h2{
+      margin:0;
+      font-family:"Inter", sans-serif;
+      font-size:18px;
+      color:var(--text);
+    }
+
+    /* ABOUT */
+    .about { font-size:15px; }
+
+    /* SKILLS */
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .skill{
+      background: rgba(0,0,0,0.03);
+      border-radius:6px;
+      padding:6px 10px;
+      font-size:13px;
+      transition: background 0.2s ease;
+    }
+    .skill:hover{
+      background: var(--color-accent);
+      color: var(--text);
+    }
+
+    /* EXPERIENCE */
+    .job{
+      border-left:3px solid rgba(0,0,0,0.08);
+      padding-left:10px;
+    }
+    .job h3{
+      margin:0;
+      font-family:"Inter", sans-serif;
+      font-size:15px;
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* CONTACT */
+    .contact-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .badge{
+      background:var(--color-accent);
+      padding:4px 8px;
+      border-radius:6px;
+      font-size:12px;
+      font-weight:700;
+      min-width:60px;
+      display:inline-block;
+      text-align:center;
+    }
+
+    /* BLOCKQUOTE */
+    blockquote{
+      margin:0;
+      padding:10px;
+      background: rgba(0,0,0,0.03);
+      border-radius:6px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      margin-top: var(--spacing);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">WH</div>
+      <div class="headline">
+        <h1 class="name">Wajia Hussaini</h1>
+        <div class="tag">Empowering communities through safe education and data-driven humanitarian action.</div>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn-ghost" href="#experience">Experience</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- MAIN CONTENT -->
+      <div class="content">
+        <section class="card">
+          <h2>About</h2>
+          <p class="about">
+            Education & Community Engagement Specialist with experience delivering mine-risk education (MRE),
+            community mobilization, and quality data collection across Kunduz and northern Afghanistan.
+            Skilled in training, stakeholder coordination, and inclusive program delivery — committed to
+            strengthening NGO services and protecting vulnerable populations.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <span class="skill">Community Engagement</span>
+            <span class="skill">MRE & EORE Facilitation</span>
+            <span class="skill">Data Collection & QC</span>
+            <span class="skill">Survey & KAP Implementation</span>
+            <span class="skill">Training & Capacity Building</span>
+            <span class="skill">Monitoring & Reporting</span>
+            <span class="skill">Dari • Pashto • English</span>
+          </div>
+        </section>
+
+        <section id="experience" class="card">
+          <h2>Selected Experience</h2>
+
+          <article class="job">
+            <h3>Data Collection Officer — International Medical Corps</h3>
+            <div class="meta">Apr 2024 — Present — Kunduz, Afghanistan</div>
+            <p>Lead field surveys, ensure data quality and manage electronic data systems. Train and supervise
+            enumerators; prepare analytic reports to inform program decisions.</p>
+          </article>
+
+          <article class="job">
+            <h3>EORE / MRE Educator — Handicap International</h3>
+            <div class="meta">Nov 2021 — Apr 2024</div>
+            <p>Delivered mine-risk education sessions, conducted KAP surveys, coordinated referrals, and supported
+            community awareness and inclusion efforts.</p>
+          </article>
+
+          <article class="job">
+            <h3>Education Technical Assistant — NRC</h3>
+            <div class="meta">Jan 2020 — Jul 2021</div>
+            <p>Monitored field classes, supported education programming, and helped build community coordination mechanisms.</p>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Impact stories</h2>
+          <blockquote>
+            “Led community awareness and KAP surveys that helped tailor MRE activities — improving reach and referral pathways for affected families.”
+          </blockquote>
+        </section>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <section id="contact" class="card">
+          <h2>Contact</h2>
+          <ul class="contact-list">
+            <li><span class="badge">Email</span> <a href="mailto:wajiahussaini37@gmail.com">wajiahussaini37@gmail.com</a></li>
+            <li><span class="badge">Phone</span> +93 748 704534</li>
+            <li><span class="badge">Location</span> Kunduz, Afghanistan</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Education & Certs</h2>
+          <p><strong>BA:</strong> English Language & Literature — Kunduz University</p>
+          <p><strong>Midwifery Program:</strong> Ahmad Shah Baba Institute of Health Sciences</p>
+          <p><strong>Selected:</strong> Microsoft Office, Hazardous Environment Training, Inclusive Humanitarian Action, PFA, Disability & Inclusion</p>
+        </section>
+
+        <section class="card">
+          <h2>References</h2>
+          <p><strong>Jawed Dawlatpoor</strong><br/>Education Technical Advisor — contact available on request</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      Available for collaboration on education, community protection, and data-driven humanitarian initiatives.
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
