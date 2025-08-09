@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,126 +8,302 @@
   <meta name="description" content="Wajia Hussaini — Education & Community Engagement Specialist focused on community protection, MRE, and data-driven humanitarian programs in Afghanistan." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --color-primary:#2B6CB0; --color-accent:#F6AD55;
-      --bg:#F7FAFC; --surface:#FFFFFF; --text:#1A202C; --muted:#4A5568;
-      --radius:10px; --max-width:1100px; --spacing:24px;
+    :root {
+      --color-primary: #2B6CB0;
+      --color-accent: #F6AD55;
+      --bg: #F7FAFC;
+      --surface: #FFFFFF;
+      --text: #1A202C;
+      --muted: #4A5568;
+      --radius: 10px;
+      --max-width: 1100px;
+      --spacing: 24px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family:"Merriweather",serif;
-      background:var(--bg);
-      color:var(--text);
-      display:flex;
-      justify-content:center;
-      padding:var(--spacing);
-      line-height:1.5;
+
+    * {
+      box-sizing: border-box
     }
-    .container{
-      width:100%;
-      max-width:var(--max-width);
-      background:var(--surface);
-      border-radius:var(--radius);
-      box-shadow:0 4px 20px rgba(0,0,0,.06);
-      padding:var(--spacing);
-      display:flex;
-      flex-direction:column;
-      gap:var(--spacing);
+
+    html,
+    body {
+      margin: 0;
+      padding: 0
     }
-    header{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:var(--spacing);
+
+    body {
+      font-family: "Merriweather", serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: var(--spacing);
+      line-height: 1.5;
     }
-    .avatar{
-      width:100px;height:100px;
-      border-radius:var(--radius);
-      background:linear-gradient(135deg,var(--color-primary),var(--color-accent));
-      display:flex;align-items:center;justify-content:center;
-      font-family:"Inter",sans-serif;font-weight:700;font-size:28px;color:white;
-      flex-shrink:0;
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+      padding: var(--spacing);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing);
     }
-    .headline{flex:1;min-width:260px}
-    .name{margin:0;font-family:"Inter",sans-serif;font-size:26px;font-weight:700}
-    .tag{margin:6px 0 0;color:var(--muted);font-size:15px}
-    .cta{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{
-      background:var(--color-primary);color:white;
-      padding:8px 14px;border-radius:6px;
-      text-decoration:none;font-family:"Inter",sans-serif;font-weight:600;font-size:14px;
-      transition:background .18s;
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--spacing);
     }
-    .btn:hover{background:#1A4C80}
-    .btn-ghost{
-      background:transparent;border:1px solid rgba(26,32,44,.15);
-      color:var(--text);padding:8px 14px;border-radius:6px;
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: white;
+      flex-shrink: 0;
     }
-    main{display:grid;grid-template-columns:2fr 1fr;gap:var(--spacing)}
-    @media (max-width:900px){main{grid-template-columns:1fr}}
-    .card{
-      background:var(--surface);
-      padding:18px;
-      border-radius:var(--radius);
-      box-shadow:0 2px 8px rgba(0,0,0,.04);
-      display:flex;flex-direction:column;gap:12px;
+
+    .headline {
+      flex: 1;
+      min-width: 260px
     }
-    h2{margin:0;font-family:"Inter",sans-serif;font-size:18px;color:var(--text)}
-    .about{font-size:15px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{
-      background:rgba(0,0,0,.03);
-      border-radius:6px;
-      padding:6px 10px;
-      font-size:13px;
-      transition:background .2s ease;
+
+    .name {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      font-size: 26px;
+      font-weight: 700
     }
-    .skill:hover{background:var(--color-accent);color:var(--text)}
-    .job{border-left:3px solid rgba(0,0,0,.08);padding-left:10px}
-    .job h3{margin:0;font-family:"Inter",sans-serif;font-size:15px}
-    .meta{font-size:13px;color:var(--muted)}
-    .contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-    .badge{
-      background:var(--color-accent);padding:4px 8px;border-radius:6px;
-      font-size:12px;font-weight:700;min-width:60px;text-align:center;display:inline-block;
+
+    .tag {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 15px
     }
-    blockquote{
-      margin:0;padding:10px;
-      background:rgba(0,0,0,.03);
-      border-radius:6px;
-      font-size:14px;color:var(--muted);
+
+    .cta {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
     }
-    form{display:flex;flex-direction:column;gap:10px}
-    input,textarea{
-      font-family:inherit;font-size:14px;
-      padding:8px 10px;border:1px solid rgba(0,0,0,.15);
-      border-radius:6px;background:white;
+
+    .btn {
+      background: var(--color-primary);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background .18s;
     }
-    textarea{min-height:100px;resize:none}
-    input:focus,textarea:focus{
-      outline:none;border-color:var(--color-primary);
-      box-shadow:0 0 0 2px rgba(43,108,176,.12);
+
+    .btn:hover {
+      background: #1A4C80
     }
-    button{
-      background:var(--color-primary);color:white;border:none;
-      padding:8px 12px;border-radius:6px;font-size:14px;
-      font-family:"Inter",sans-serif;font-weight:600;cursor:pointer;
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(26, 32, 44, .15);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 6px;
     }
-    button[disabled]{opacity:.6;cursor:not-allowed}
-    .form-status{font-size:13px;color:var(--muted);min-height:22px}
-    .form-status .success{color:#125a32;background:#e6f9ed;padding:6px 8px;border-radius:6px;display:inline-block}
-    .form-status .error{color:#7a261b;background:#fdecea;padding:6px 8px;border-radius:6px;display:inline-block}
-    footer{text-align:center;font-size:13px;color:var(--muted);margin-top:var(--spacing)}
+
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--spacing)
+    }
+
+    @media (max-width:900px) {
+      main {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      padding: 18px;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      color: var(--text)
+    }
+
+    .about {
+      font-size: 15px
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .skill {
+      background: rgba(0, 0, 0, .03);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 13px;
+      transition: background .2s ease;
+    }
+
+    .skill:hover {
+      background: var(--color-accent);
+      color: var(--text)
+    }
+
+    .job {
+      border-left: 3px solid rgba(0, 0, 0, .08);
+      padding-left: 10px
+    }
+
+    .job h3 {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      font-size: 15px
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .badge {
+      background: var(--color-accent);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      min-width: 60px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, .03);
+      border-radius: 6px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    input,
+    textarea {
+      font-family: inherit;
+      font-size: 14px;
+      padding: 8px 10px;
+      border: 1px solid rgba(0, 0, 0, .15);
+      border-radius: 6px;
+      background: white;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: none
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px rgba(43, 108, 176, .12);
+    }
+
+    button {
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button[disabled] {
+      opacity: .6;
+      cursor: not-allowed
+    }
+
+    .form-status {
+      font-size: 13px;
+      color: var(--muted);
+      min-height: 22px
+    }
+
+    .form-status .success {
+      color: #125a32;
+      background: #e6f9ed;
+      padding: 6px 8px;
+      border-radius: 6px;
+      display: inline-block
+    }
+
+    .form-status .error {
+      color: #7a261b;
+      background: #fdecea;
+      padding: 6px 8px;
+      border-radius: 6px;
+      display: inline-block
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: var(--spacing)
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="avatar">WH</div>
       <div class="headline">
         <h1 class="name">Wajia Hussaini</h1>
-        <div class="tag">Empowering communities through safe education and data-driven humanitarian action.</div>
+        <div class="tag">Data Collection Officer <br />International Medical Corps
+        </div>
         <div class="cta">
           <a class="btn" href="#contact">Contact</a>
           <a class="btn-ghost" href="#experience">Experience</a>
@@ -165,13 +342,13 @@
             <h3>Data Collection Officer — International Medical Corps</h3>
             <div class="meta">Apr 2024 — Present — Kunduz, Afghanistan</div>
             <p>Lead field surveys, ensure data quality and manage electronic data systems. Train and supervise
-            enumerators; prepare analytic reports to inform program decisions.</p>
+              enumerators; prepare analytic reports to inform program decisions.</p>
           </article>
           <article class="job">
             <h3>EORE / MRE Educator — Handicap International</h3>
             <div class="meta">Nov 2021 — Apr 2024</div>
             <p>Delivered mine-risk education sessions, conducted KAP surveys, coordinated referrals, and supported
-            community awareness and inclusion efforts.</p>
+              community awareness and inclusion efforts.</p>
           </article>
           <article class="job">
             <h3>Education Technical Assistant — NRC</h3>
@@ -234,7 +411,6 @@
     const form = document.getElementById('contact-form');
     const statusEl = document.getElementById('form-status');
     const submitBtn = document.getElementById('submit-btn');
-
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       statusEl.textContent = '';
@@ -245,16 +421,18 @@
       try {
         const res = await fetch(FORMSPREE_ENDPOINT, {
           method: 'POST',
-          headers: { 'Accept': 'application/json' },
+          headers: {
+            'Accept': 'application/json'
+          },
           body: fd
         });
         if (res.ok) {
           statusEl.innerHTML = '<span class="success">Thanks — message sent!</span>';
           form.reset();
         } else {
-          const data = await res.json().catch(()=>null);
+          const data = await res.json().catch(() => null);
           if (data && data.errors) {
-            statusEl.innerHTML = '<span class="error">' + data.errors.map(e=>e.message).join(', ') + '</span>';
+            statusEl.innerHTML = '<span class="error">' + data.errors.map(e => e.message).join(', ') + '</span>';
           } else {
             statusEl.innerHTML = '<span class="error">Submission failed — try later.</span>';
           }
@@ -264,14 +442,18 @@
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send';
-        setTimeout(()=>{ statusEl.textContent=''; }, 8000);
+        setTimeout(() => {
+          statusEl.textContent = '';
+        }, 8000);
       }
     });
-
     document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
       e.preventDefault();
-      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      document.querySelector(a.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
     }));
   </script>
 </body>
+
 </html>
